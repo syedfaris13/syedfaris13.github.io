@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#greet {
+    padding-bottom: 130px;
+}
+
+#templateBefore {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#templateBeforeHide {
+    display: none;
+}
+
+.avatarMenu {
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/matte-black-color-solid-background-1920x1080.png");
+    height: 100vh;
+    width: 100%;
+    opacity: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarMenuHide {
+    display: none;
+}
+
+.mainInterface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("https://www.datocms-assets.com/50353/1624969247-tree-valley.jpeg");
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+aside{
+    margin-left: 100px;
+}
+
+#left-aside {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEVtjnlrrBn0AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC");
+    margin: 0;
+    opacity: 85%;
+    box-shadow: 0 0 0 10000px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 170px;
+}
+
+#right-aside {
+    margin-left: 50px;
+}
+
+#sound-icon {
+    padding: 5px;
+    right: 100px;
+    height: 42px;
+    position: absolute;
+    display: block;
+}
+
+#sound-icon:hover {
+    cursor: pointer;
+    background-color: white;
+    opacity: 70%;
+}
+
+#mute-icon {
+    padding: 5px;
+    right: 60px;
+    height: 42px;
+    position: absolute;
+}
+
+#mute-icon:hover {
+    cursor: pointer;
+    background-color: white;
+    opacity: 70%;
+}
+
+#settings-icon {
+    padding: 5px;
+    right: 20px;
+    height: 42px;
+    position: absolute;
+}
+
+#settings-icon:hover {
+    cursor: pointer;
+    background-color: white;
+    opacity: 70%;
+}
+
+#controls {
+    height: 42px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#controls-change {
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/matte-black-color-solid-background-1920x1080.png");
+    height: 42px;
+    width: 100%;
+    opacity: 85%;
+    display: flex;
+    flex-direction: row;
+}
+
+#controls-hide {
+    display: none;
+}
+
+#sound-icon-none {
+    display: none;
+}
+
+#mute-icon-none {
+    display: none;
+}
+
+#settings-icon-none {
+    display: none;
+}
+
+#settings-menu-close {
+    display: none;
+    height: 40px;
+}
+
+#cancel-icon {
+    position: absolute;
+}
+
+#settings-menu-open {
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/matte-black-color-solid-background-1920x1080.png");
+    height: 100%;
+    width: 100%;
+    opacity: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#cancel-image {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+#player-X-name,
+#player-O-name {
+    padding: 5px;
+    margin: 10px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+    font-family: fantasy;
+}
+
+.scorePlaceholder {
+    border: 2px solid midnightblue;
+}
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 330px;
+    align-items: center;
+    justify-content: center;
+}
+
+#playerX,
+#playerO {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 2px solid midnightblue;
+}
+
+#playerScoreX,
+#playerScoreO {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid midnightblue;
+}
+
+button {
+    border: 4px solid green;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: lightyellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: green;
+    color: black;
+}
+
+.occupied {
+    display: flex;
+    width: 110px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.occupied:hover {
+    background: #ff3a3a;
+}
+
+.play-area {
+    display: grid;
+    width: 330px;
+    height: 300px;
+    grid-template-columns: 3fr 3fr 3fr;
+    margin-top: 40px;
+    position: relative;
+}
+
+.block {
+    display: flex;
+    width: 110px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.block:hover {
+    cursor: pointer;
+    background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+    border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+    border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+    border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+    border-right: none;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 330px;
+}
+
+#winner {
+    color: navajowhite;
+    padding-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#strike {
+    position: absolute;
+    background-color: maroon;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 48%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+.strike-column-1 {
+    width: 4px;
+    height: 100%;
+    left: 15%;
+}
+.strike-column-2 {
+    width: 4px;
+    height: 100%;
+    left: 48%;
+}
+.strike-column-3 {
+    width: 4px;
+    height: 100%;
+    left: 83%;
+}
+
+.strike-diagonal-1 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+#choose-avatar {
+    color: white;
+    padding-bottom: 20px;
+}
+
+#playerXChoose {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    border-bottom: 2px solid gold;
+    margin-bottom: 40px;
+}
+
+#playerOChoose {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    border-bottom: 2px solid gold;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    height: 10px;
+    width: 10px;
+}
+
+.animal {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.animal:hover {
+    height: 110px;
+    width: 110px;
+}
+
+#avatar-row-1 {
+    height: 200px;
+    width: 100%;
+    padding-left: 176px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#avatar-row-2 {
+    height: 200px;
+    width: 100%;
+    padding-left: 176px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#avatar0:hover,
+#avatar1:hover,
+#avatar2:hover,
+#avatar3:hover,
+#avatar4:hover,
+#avatar5:hover {
+    cursor: pointer;
+}
+
+#mainHide {
+    display: none;
+}
+
+#mainAppear {
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

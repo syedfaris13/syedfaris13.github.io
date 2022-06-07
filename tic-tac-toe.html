@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="templateBefore" class="template">
+        <div id="left-aside">
+            <h1 id="greet">WELCOME TO THE JUNGLE</h1>
+            <h2>Please Enter Your Name:</h2>
+            <form>
+                <input type="text" id="player-X-name" class="inputPlayerName" value="Enter Player X Name"
+                    onclick="clearDefaultText1()" onmouseleave="defaultText1()" focus>
+                <p>VS</p>
+                <input type="text" id="player-O-name" class="inputPlayerName" value="Enter Player O Name"
+                    onclick="clearDefaultText2()" onmouseleave="defaultText2()">
+            </form>
+        </div>
+
+        <div id="menuAvatar" class="avatarMenu">
+            <h1 id="choose-avatar">Avatar Gallery</h1>
+            <p id="playerXChoose" class="playerChoose"></p>
+            <div id="avatar-row-1">
+                <div id="avatar0" class="avatar" onmouseover=""><img class="animal" src="hen.png" alt="hen"
+                        onclick="chooseAvatar(0)"></div>
+                <div id="avatar1" class="avatar"><img class="animal" src="dog.png" alt="dog" onclick="chooseAvatar(1)">
+                </div>
+                <div id="avatar2" class="avatar"><img class="animal" src="ferret.png" alt="ferret"
+                        onclick="chooseAvatar(2)"></div>
+            </div>
+            <div id="avatar-row-2">
+                <div id="avatar3" class="avatar"><img class="animal" src="owl.png" alt="owl" onclick="chooseAvatar(3)">
+                </div>
+                <div id="avatar4" class="avatar"><img class="animal" src="penguin.png" alt="penguin"
+                        onclick="chooseAvatar(4)"></div>
+                <div id="avatar5" class="avatar"><img class="animal" src="rhino.png" alt="rhino"
+                        onclick="chooseAvatar(5)">
+                </div>
+            </div>
+            <button id="startGame" class="gameStart" onclick="startGame()">Start</button>
+        </div>
+
+    </div>
+
+    <div id="mainHide" class="mainInterface">
+        <div id="right-aside">
+            <div id="controls" class="controlsNav">
+                <div id="sound-icon"><img src="sound-icon.png" alt="background-sound" height="30px"
+                        onclick="backgroundSound()"></div>
+                <div id="mute-icon"><img src="mute-sound-icon.png" alt="mute-sound-icon" height="30px"
+                        onclick="muteBackgroundSound()"></div>
+                <div id="settings-icon"><img src="settings-icon.png" alt="settings-icon" height="30px"
+                        onclick="openMenu()">
+                </div>
+            </div>
+
+            <div id="settings-menu-close" class="settings" onmouseleave="closeMenu()">
+                <div id="cancel-icon">
+                    <img id="cancel-image" src="cancel-icon.png" alt="cancel-icon" height="20px" onclick="closeMenu()">
+                </div>
+                <h1 id="choose-avatar">Avatar Gallery</h1>
+                <p id="playerXChoose" class="playerChoose">Player X Choose!!</p>
+                <div id="avatar-row-1">
+                    <div id="avatar0" class="avatar" onmouseover=""><img class="animal" src="hen.png" alt="hen"
+                            onclick="chooseAvatar(0)"></div>
+                    <div id="avatar1" class="avatar"><img class="animal" src="dog.png" alt="dog"
+                            onclick="chooseAvatar(1)"></div>
+                    <div id="avatar2" class="avatar"><img class="animal" src="ferret.png" alt="ferret"
+                            onclick="chooseAvatar(2)"></div>
+                </div>
+                <div id="avatar-row-2">
+                    <div id="avatar3" class="avatar"><img class="animal" src="owl.png" alt="owl"
+                            onclick="chooseAvatar(3)"></div>
+                    <div id="avatar4" class="avatar"><img class="animal" src="penguin.png" alt="penguin"
+                            onclick="chooseAvatar(4)"></div>
+                    <div id="avatar5" class="avatar"><img class="animal" src="rhino.png" alt="rhino"
+                            onclick="chooseAvatar(5)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <div class="scorePlaceholder">
+                <div class="scoreboard">
+                    <div id="playerX">Player X</div>
+                    <div id="playerO">Player O</div>
+                </div>
+                <div class="scoreboard">
+                    <div id="playerScoreX" class="playerScore">0</div>
+                    <div id="playerScoreO" class="playerScore">0</div>
+                </div>
+            </div>
+            <div class="play-area">
+                <div id="block_0" class="block" onclick="addPlayerMove(0)"></div>
+                <div id="block_1" class="block" onclick="addPlayerMove(1)"></div>
+                <div id="block_2" class="block" onclick="addPlayerMove(2)"></div>
+                <div id="block_3" class="block" onclick="addPlayerMove(3)"></div>
+                <div id="block_4" class="block" onclick="addPlayerMove(4)"></div>
+                <div id="block_5" class="block" onclick="addPlayerMove(5)"></div>
+                <div id="block_6" class="block" onclick="addPlayerMove(6)"></div>
+                <div id="block_7" class="block" onclick="addPlayerMove(7)"></div>
+                <div id="block_8" class="block" onclick="addPlayerMove(8)"></div>
+                <div id="strike" class="strike-line"></div>
+            </div>
+
+            <div class="status">
+                <h2 id="winner"></h2>
+                <button class="reset-board" onclick="resetBoard()">RESET BOARD</button>
+                <button class="reset-score" onclick="resetScore()">RESET SCORE</button>
+            </div>
+
+            <audio id="win-audio" src="mixkit-winning-notification-2018.wav"></audio>
+            <audio id="draw-audio" src="mixkit-negative-answer-lose-2032.wav"></audio>
+            <audio id="background-sound" src="birds-in-forest-on-sunny-day-14444.mp3"></audio>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
